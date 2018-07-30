@@ -1,0 +1,60 @@
+
+body {
+  background-color: black;
+  color: white;
+  margin: 1em;
+  padding: 2em;
+}
+
+body {
+  font-family: "Benton Sans", "Helvetica Neue", helvetica, arial, sans-serif;
+  margin: 2em;
+}
+
+h1, h2, h3 {
+  color: white;
+  text-align: center;
+}
+
+main {
+  margin: 0px auto;
+}
+
+form {
+  margin: 0px auto; /* this centers the form element */
+  width: 80%;
+}
+
+
+
+section {
+    margin: 0 auto;
+}
+
+.hints-and-solutions {
+  display: grid;
+  background: white;
+  color: black;
+  grid-template-columns: 50% 50%;
+  margin: 1em;
+  padding: 1em;
+}
+
+.highlight {
+  border: 1px solid yellow;
+}
+
+.hints {
+  margin: 0.5em;
+  padding: 0.5em;
+}
+
+.solutions {
+  margin: 0.5em;
+  padding: 0.5em;
+}
+  
+    
+p > a {
+  background-color: white;
+}
