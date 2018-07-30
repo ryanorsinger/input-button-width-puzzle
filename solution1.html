@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login</title>
+  <link rel="stylesheet" href="./style.css">
+  <style>
+    /* These styles apply to the text input on the form */
+    input {
+        padding: 0px; /* explicitly setting the input's padding to 0px means we're not using browser defaults. */
+      
+        width: 100%;  /* with padding of 0px, the total width of this element matches its width property */
+        margin-bottom: 1em;
+        border: none;
+        height: 3em;
+        text-align: center;
+    }
+
+    /* these styles apply to the submit button on the form */
+    button {
+        width: 100%;
+
+        padding: 0px;
+        margin: 0px;
+        border: none;
+
+        color: white;
+        font-weight: bold;
+
+        background-color: #0fb784;
+        height: 3em;
+    }
+
+    
+  </style>
+</head>
+<body>
+  <main>
+    <section>  
+        <h1>
+          Solution #1, set padding: 0px;
+        </h1>
+        <h2>
+          Line up the text-input and button elements by setting the input's padding to 0px;
+        </h2>
+        <p>
+          Rationale: The browser default styling on the text input sets padding automatically.
+        </p>
+        <p>    
+          Because text inputs default to having a <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing" target="_blank">"box-sizing"</a> of "content-box", the total width of the input element was the width property 100% plus the extra pixels added by the default padding.
+        </p>
+        <p>
+          Setting the text input's padding to 0px means that the total width is the width property + zero padding + zero border, so it lines up with the button below.
+        </p>
+        <p>
+          View the CSS changes inside the "style" tag of solution1.html to see this fix.
+        </p>
+        
+      <form>
+        <input type="text" id="username" name="username" placeholder="This input element has the same width value as the button.">
+        <br>
+        <button class="btn btn-block">This button has the same width value as the text input above</button>
+      </form>
+    </section>
+    <hr>
+    <section class="hints-and-solutions">
+      <article class="hints">
+        <h4>
+           Here are some hints: 
+        </h4>
+        <dl>
+          <dt>
+            Hint 1
+          </dt>
+          <dd>
+            <a href="#" id="border">Click Here</a> to toggle a border around the form element. Zoom in on the right side of the box to see how the input and button relate to the border. It looks like the text input is wider than its container. Why would that be the case?
+          </dd>
+          <dt>
+            Hint 2
+          </dt>
+          <dd>
+            Measure how many pixels wide the text input takes vs. how many pixels wide the button element occupies. Go to style.css and change the width on the input and button element to 500px; There is still the mismatch.  
+          </dd>
+          <dt>
+            Hint 3
+          </dt>
+          <dd>
+            Are there properties such as margin, padding, or border that your browser applies automatically?
+          </dd>
+          <dt>
+            Hint 4
+          </dt>
+          <dd>
+            What size or other properties might browsers be defaulting to? For example, almost every element in HTML defaults its "box-sizing" property to be "content-box". That means that the total width of an element is not only its width property but a sum of border-left, padding-left, width, padding-right, and border-right... 
+          </dd>
+          <dt>
+            Hint 5
+          </dt>
+          <dd>
+            What do you find and see when you search a search engine for <a href="https://duckduckgo.com/?q=HTML+text+input+and+button+element+not+lining+up+with+same+width+property+in+CSS&t=hb&ia=qa">"HTML text input and button element not lining up with same width property in CSS"?</a>
+          </dd>
+        </dl>
+      </article>
+      <article class="solutions">
+        <h3>
+          <a href="./index.html">Back to index.html</a>
+        </h3>
+        <h4>
+          Other Solutions:
+        </h4>
+        <ul>
+          <li><a href="/solution1.html">Solution 1</a> Padding </li>
+          <li><a href="./solution2.html">Solution 2</a> Box-sizing </li>
+          <li><a href="./solution3.html">Solution 3</a> Use calc() in CSS</li>
+        </ul>
+      </article>
+    </section>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <!-- include the Glitch button to show what the webpage is about and
+          to make it easier for folks to view source and remix -->
+    <div class="glitchButton" style="position:fixed;top:20px;right:20px;"></div>
+    <script src="https://button.glitch.me/button.js"></script>
+    
+    <script src="../script.js"></script>
+</main>
+</body>
+</html>

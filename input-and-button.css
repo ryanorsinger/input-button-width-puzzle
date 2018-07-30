@@ -1,0 +1,24 @@
+/* These styles apply to the text input on the form */
+input {
+    margin-bottom: 1em;
+    border: none;
+    width: 100%;   /* why is this 100% different than the button's 100% width? That's the puzzle */
+    height: 3em;
+    text-align: center;
+}
+
+
+/* these styles apply to the submit button on the form */
+button {
+    width: 100%;
+
+    padding: 0px;
+    margin: 0px;
+    border: none;
+
+    color: white;
+    font-weight: bold;
+
+    background-color: #0fb784;
+    height: 3em;
+}
